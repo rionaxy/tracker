@@ -23,7 +23,8 @@ Then open http://localhost:8000. Opening index.html directly as a file will not 
 ## Features
 
 - Password-first entry screen; creates an encrypted vault on first use.
-- Add, edit, delete, search, and filter income and expenses.
+- Add, edit, delete, search, and filter income and expenses. Two small buttons, Add Expenses and Add Income, open the form already set to that type (no Type dropdown). The Amount field shows the ledger currency symbol.
+- Custom date picker in the transaction form, styled like the month pill: day arrows, an inline calendar, Today, and full keyboard support.
 - Monthly category budgets and overspending indicators.
 - Month-to-date chart on the overview: cumulative spending and income by day, with a budget pace line when budgets are set. Hover, tap, or use arrow keys to read each day.
 - 13 colorways in Settings. The chosen colorway name is stored unencrypted in this browser (key `glass-ledger-theme`) so the lock screen can match it; no financial data is included.
