@@ -1,0 +1,4 @@
+*backup*.json
+glass-ledger-*.csv
+node_modules/
+.DS_Store
