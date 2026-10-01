@@ -69,3 +69,7 @@ Edit the colors in `styles.css`. Expense and income category lists live in `vaul
 ## Currencies
 
 Asian currencies are grouped by region (Southeast, East, South, Central, Western Asia) plus USD, EUR, GBP, CAD and AUD. The list lives in `vault.js` (`CURRENCY_GROUPS`) and is also what backup validation accepts. Per-transaction and per-budget maximum raised to 999,999,999,999 so large-denomination currencies (VND, IDR, KRW) fit.
+
+## Currency wheel
+
+Settings > Currency uses an iOS-style two-wheel picker (Region, then Currency) instead of a dropdown. Touch swipe, mouse drag, mouse wheel (one notch = one row), click a row, and keyboard (arrows, PageUp/PageDown, Home/End) all work. The chosen value is held in a hidden `#currency` input and saved with **Save currency**.
