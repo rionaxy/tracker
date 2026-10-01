@@ -59,3 +59,13 @@ Edit the colors in `styles.css`. Expense and income category lists live in `vaul
 ## Verification
 
 `node --test tests/vault.test.mjs` checks encryption round trips, incorrect passwords, tampering, randomized IVs, schema rejection, password rotation, and iteration-count bounds. The user interface has no automated browser tests; check setup, transactions, budgets, backup/restore, locking, password changes, and mobile layout manually after changes.
+
+## New ledger
+
+- Lock screen: **New Ledger** (only shown when a ledger exists) opens a warning dialog. Typing ERASE is required, because the password may be forgotten.
+- Settings: **New ledger** panel opens the same dialog but requires the current password, verified by decrypting the saved ledger.
+- Both erase the saved ledger from this browser and return to the create-password screen. Colorway preference is kept. The dialog links to Encrypted backup first.
+
+## Currencies
+
+Asian currencies are grouped by region (Southeast, East, South, Central, Western Asia) plus USD, EUR, GBP, CAD and AUD. The list lives in `vault.js` (`CURRENCY_GROUPS`) and is also what backup validation accepts. Per-transaction and per-budget maximum raised to 999,999,999,999 so large-denomination currencies (VND, IDR, KRW) fit.

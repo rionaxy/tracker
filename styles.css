@@ -188,3 +188,24 @@ button.nudge{animation:nudge 1.8s ease-in-out 3;border-color:color-mix(in srgb,v
 .dp-foot{display:flex;justify-content:center;margin-top:10px;padding-top:8px;border-top:1px solid var(--line)}
 .dp-card .dp-foot .text-button{padding:8px 14px;color:var(--accent-text);font-weight:600}
 @media(max-width:480px){#transaction-form .form-grid{grid-template-columns:1fr;gap:0}}
+
+/* New ledger / erase */
+[hidden]{display:none!important}
+.auth-links{display:flex;flex-wrap:wrap;gap:6px 22px;align-items:center}
+.text-button.danger-link{color:var(--red)}
+.danger-zone{border-color:color-mix(in srgb,var(--red) 28%,var(--line))}
+.danger-zone h2{color:var(--red)}
+.danger-zone p strong{color:var(--text)}
+#reset-dialog{width:min(500px,calc(100% - 32px));border-color:color-mix(in srgb,var(--red) 45%,var(--line-strong))}
+#reset-dialog .reset-icon{width:52px;height:52px;border-radius:18px;display:grid;place-items:center;font-size:1.6rem;font-weight:800;color:var(--red);background:color-mix(in srgb,var(--red) 16%,transparent);border:1px solid color-mix(in srgb,var(--red) 40%,transparent);margin-bottom:18px}
+#reset-dialog h2{margin-bottom:12px}
+#reset-dialog .reset-warn{line-height:1.6;color:var(--label);margin-bottom:12px}
+#reset-dialog .reset-warn strong{color:var(--red);font-weight:700}
+#reset-dialog .reset-list{margin:0 0 14px;padding-left:20px;line-height:1.7;color:var(--muted);font-size:.9rem}
+#reset-dialog .text-button{padding:6px 0;margin-bottom:14px;color:var(--accent-text);font-weight:600}
+#reset-dialog label{margin-bottom:14px}
+#reset-dialog .actions{justify-content:flex-end;flex-wrap:wrap}
+button.danger.solid{background:var(--red);border-color:var(--red);color:var(--ink);font-weight:650}
+button.danger.solid:hover{background:color-mix(in srgb,var(--red) 85%,#fff)}
+button.danger.solid:disabled{opacity:.6}
+@media(max-width:480px){#reset-dialog .actions{flex-direction:column-reverse;align-items:stretch}#reset-dialog .actions button{width:100%}}
